@@ -1,10 +1,44 @@
-// import React from 'react'
+import { useReducer } from 'react';
 
+// variables
 import arrowIcon from '../assets/icon-arrow.svg';
 
-const Form = () => {
+// helpers
+import { isIP } from 'validator';
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'setInputValue':
+      return { ...state, inputValue: action.inputValue };
+    default:
+      return state;
+  }
+};
+
+const Form = ({ formHandler }) => {
+  const [state, dispatch] = useReducer(reducer, {
+    isValid: false,
+    isEmpty: true,
+  });
+
+  const validateForm = (e) => {
+    e.preventDefault();
+
+    if (!state.inputValue) return;
+
+    console.log('test');
+
+    console.log(isIP(state.inputValue));
+
+    isIP(state.inputValue) && formHandler(state.inputValue);
+  };
+
+  const handleInputChange = (e) => {
+    dispatch({ type: 'setInputValue', inputValue: e.target.value.trim() });
+  };
+
   return (
-    <form className="w-full">
+    <form className="w-full" onSubmit={validateForm}>
       <div className="relative flex bg-white rounded-2xl overflow-hidden">
         <input
           type="text"
@@ -12,6 +46,7 @@ const Form = () => {
           id=""
           placeholder="192.212.174.101"
           className="w-full font-rubik font-normal text-lg py-4 px-6 tracking-wide"
+          onChange={handleInputChange}
         />
         <button
           type="submit"
@@ -20,7 +55,6 @@ const Form = () => {
           <img src={arrowIcon} alt="" className="size-fit" />
         </button>
       </div>
-      {/* <p className="mt-2 ml-4 font-rubik text-base">wrong ip address</p> */}
     </form>
   );
 };
