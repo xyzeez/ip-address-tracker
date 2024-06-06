@@ -1,24 +1,39 @@
-// import React from 'react';
+// Components
+const DataBoard = ({ data }) => {
+  const emptyData = {
+    ip: '---.---.---.---',
+    location: '---, ---',
+    timezone: '---',
+    isp: '---',
+  };
 
-const DataBoard = () => {
+  const renderData = data
+    ? {
+        ip: data.ip,
+        location: `${data.location.city}, ${data.location.region}`,
+        timezone: `UTC${data.location.timezone}`,
+        isp: data.isp || '---',
+      }
+    : emptyData;
+
   return (
-    <div className="bg-white w-full flex items-center p-6 overflow-hidden rounded-2xl">
+    <div className="w-full grid grid-cols-1 grid-rows-1">
       <ul className="font-rubik text-xl text-gray-900 font-bold flex flex-col gap-4 items-center text-center w-full">
         <li className="">
           <span className="block text-xs mb-2 text-gray-600">IP ADDRESS</span>
-          192.212.174.101
+          {renderData.ip}
         </li>
         <li>
           <span className="block text-xs mb-2 text-gray-600">LOCATION</span>
-          Brooklyn, NY 10001
+          {renderData.location}
         </li>
         <li>
           <span className="block text-xs mb-2 text-gray-600">TIMEZONE</span>
-          UTC-05:00
+          {renderData.timezone}
         </li>
         <li>
           <span className="block text-xs mb-2 text-gray-600">ISP</span>
-          SpaceX Starlink
+          {renderData.isp}
         </li>
       </ul>
     </div>
