@@ -38,6 +38,7 @@ const Map = ({ userCoords }) => {
       ref={mapRef}
       center={coords}
       zoom={13}
+      zoomControl={false}
       scrollWheelZoom={false}
       style={{ height: '100%', width: '100%' }}>
       <TileLayer
