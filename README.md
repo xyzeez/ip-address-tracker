@@ -30,19 +30,9 @@
     <!-- Status -->
     <a href="#">
       <img
-        src="https://img.shields.io/badge/Status-In Development-0074D9?style=for-the-badge"
-        alt="Status In Development" />
-    </a>
-    <!-- <a href="#">
-      <img
         src="https://img.shields.io/badge/Status-Completed-2ECC40?style=for-the-badge"
         alt="Status Completed" />
-    </a> -->
-    <!-- <a href="#">
-      <img
-        src="https://img.shields.io/badge/Status-Debugging-FFFF00?style=for-the-badge"
-        alt="Status Debugging" />
-    </a> -->
+    </a>
   </div>
 
   <br>
@@ -53,14 +43,13 @@
 
 This is a solution to the [IP address tracker challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0).
 
-<!-- ## Table of contents
+## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -70,24 +59,27 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
 
 Users should be able to:
 
-- View the optimal layout for the site depending on their device's screen size
+- View the optimal layout for each page depending on their device's screen size
 - See hover states for all interactive elements on the page
+- See their own IP address on the map on the initial page load
+- Search for any IP addresses or domains and see the key information and location
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [IP Address Tracker](https://www.frontendmentor.io/solutions/ip-address-tracker-react-tailwind-vite-aUDI8N-c3h)
+- Live Site URL: [femc-iptracker](https://femc-iptracker.netlify.app/)
 
 ## My process
 
 ### Built with
 
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) &nbsp; ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) &nbsp; ![JavaScript](https://img.shields.io/badge/JavaScript%20-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black) &nbsp;
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) &nbsp; ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) &nbsp;
 
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept. -->
+- [LeafletJS](https://leafletjs.com/) : an open-source JavaScript library for mobile-friendly interactive maps
+- [React Leaflet](https://react-leaflet.js.org/) : React components for Leaflet maps.
+- [IP Geolocation API by IPify](https://geo.ipify.org/) : real-time IP Geolocation API
+- [ldrs](https://uiball.com/ldrs/) : Modern, tree-shakeable loader & spinner web components.
+- [validatorjs](https://github.com/validatorjs/validator.js) : A library of string validators and sanitizers.
 
 ## Author
 
