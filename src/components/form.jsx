@@ -38,13 +38,13 @@ const Form = ({ formHandler }) => {
   };
 
   return (
-    <form className="w-full" onSubmit={validateForm}>
+    <form className="w-full max-w-xl" onSubmit={validateForm}>
       <div className="relative flex bg-white rounded-2xl overflow-hidden">
         <input
           type="text"
           name=""
           id=""
-          placeholder="192.212.174.101"
+          placeholder="Search for any IP address or domain"
           className="w-full font-rubik font-normal text-lg py-4 px-6 tracking-wide"
           onChange={handleInputChange}
         />

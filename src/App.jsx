@@ -69,12 +69,12 @@ const App = () => {
 
   return (
     <main className="grid grid-rows-[max-content_1fr] border min-h-screen bg-white">
-      <section className="flex gap-6 flex-col items-center bg-cover bg-no-repeat p-6 w-full h-[46vh] bg-[url('./assets/pattern-bg-mobile.png')]">
+      <section className="flex gap-6 flex-col items-center bg-cover bg-no-repeat p-6 w-full h-[max(46vh,20rem)] md:h-[min(46vh,16rem)] bg-[url('./assets/pattern-bg-mobile.png')]  sm:bg-[url('./assets/pattern-bg-desktop.png')]">
         <h1 className="font-rubik text-white font-medium text-[1.5rem] -tracking-tighter">
           IP Address Tracker
         </h1>
         <Form formHandler={(ip) => dispatch({ type: 'setIP', userIP: ip })} />
-        <div className="w-full z-[9999] bg-white grid grid-cols-1 grid-rows-1 p-6 rounded-2xl">
+        <div className="w-full max-w-5xl z-[9999] bg-white grid grid-cols-1 grid-rows-1 p-6 md:p-8 rounded-2xl">
           {state.isLoading ? (
             <div className="flex min-h-20 flex-row items-center justify-center">
               <l-loader size={45} color="black"></l-loader>
@@ -84,7 +84,7 @@ const App = () => {
           )}
         </div>
       </section>
-      <section className="w-full bg-gray-600 min-h-full">
+      <section className="w-full bg-gray-600 h-full min-h-[max(60vh,20rem)]">
         <Map userCoords={state.userCoords} />
       </section>
     </main>
